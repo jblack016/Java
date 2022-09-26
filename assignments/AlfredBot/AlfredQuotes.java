@@ -1,4 +1,4 @@
-import java.util.date;
+import java.util.Date;
 public class AlfredQuotes {
     public String basicGreeting(){
         // you do not need to code here, this is an example method
@@ -7,17 +7,23 @@ public class AlfredQuotes {
 
     public String guestGreeting(String name){
         // your code here
-        return "place holder for guest greeting return string";
+        return String.format( "Hello, lovely to see you %s", name);
     }
 
     public String dateAnnouncement(){
-        // your code here
-        return "placeholder for date announcement return string";
+        return String.format("Current date is %s", new Date());
     }
 
     public String respondBeforeAlexis(String conversation){
-        // your code here
-        return "for snarky response return string";
+
+        if(conversation.indexOf("Alexis") > -1){
+            return "She's no help, how can I be of assistance?";
+        }
+        if(conversation.indexOf("Alfred") > - 1){
+            return "At your service, how can I be of assistance?";
+        }
+
+        return  "for snarky response return string";
     }
     // ninja bonus 
     // see the specs to overload the guessGreeting method
