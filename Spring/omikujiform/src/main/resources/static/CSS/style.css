@@ -1,0 +1,16 @@
+.box{
+	height: 500px;
+	width: 400px;
+	border: 4px solid black;
+	background-color: #89CFF0;
+}
+
+.center{
+	text-align: center;
+}
+
+.flex{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
