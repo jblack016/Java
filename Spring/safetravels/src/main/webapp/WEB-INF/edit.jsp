@@ -14,32 +14,11 @@
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body style="margin: 10vw;">
-<h1 class="d-flex justify-content-center">Save Travels</h1>
-<table class="table table-dark table-striped table-bordered">
-    <thead>
-        <tr>
-            <th class="text-center">Expense</th>
-            <th class="text-center">Vendor</th>
-            <th class="text-center">Amount</th>
-            <th class="text-center">Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-		<c:forEach var="expense" items="${expenses}">
-			<tr>
-				<td class="text-center"><c:out value="${expense.name}"></c:out></td>
-				<td class="text-center"><c:out value="${expense.vendor}"></c:out></td>
-				<td class="text-center">$<c:out value="${expense.amount}"></c:out></td>
-				
-				<td class="text-center"><a href="/edit/${expense.id }">Edit</a></td>
-			</tr>	
-		</c:forEach>
-    </tbody>
-</table>
+<h1 class="text-center">Edit Expense</h1>
 <br>
-<h1 class="d-flex justify-content-center">Add an expense:</h1>
 <div class="d-flex justify-content-center">
-<form:form action="/expenses" method="post" modelAttribute="expense">
+<form:form action="/edit/${expense.id}" method="post" modelAttribute="expense">
+	<input type="hidden" name="_method" value="put">
 
 	<div>
 		<form:label path="name">Expense Name: </form:label><br />
@@ -66,12 +45,14 @@
 	</div>
 	
 	<div>
-		<input type="submit" value="Submit"/>
+		<input type="submit" value="Submit" class="btn btn-primary"/>
+		<a href="/expenses/" class="btn btn-secondary">Go back</a>
 	</div>
 	
 	
 
 </form:form>
 </div>
+
 </body>
 </html>
