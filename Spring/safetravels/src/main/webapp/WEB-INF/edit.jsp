@@ -46,7 +46,7 @@
 	
 	<div>
 		<input type="submit" value="Submit" class="btn btn-primary"/>
-		<a href="/expenses/" class="btn btn-secondary">Go back</a>
+		<a href="/expenses/" class="btn btn-danger">Go back</a>
 	</div>
 	
 	
