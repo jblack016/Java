@@ -1,5 +1,7 @@
 package com.jaredblack.eventplanner.controllers;
 
+import java.util.List;
+
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
@@ -15,7 +17,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 
 import com.jaredblack.eventplanner.models.Event;
-
 import com.jaredblack.eventplanner.services.EventService;
 
 
@@ -75,7 +76,7 @@ public class HomeController {
 		}
 		Event foundEvent = eventService.oneEvent(id);
 		model.addAttribute("event", foundEvent);
-		System.out.println(foundEvent.getEventUsers().get(0).getGuest());
+		foundEvent.getEventUsers().forEach(e-> System.out.println(e.getId()));
 		return "viewEvent.jsp";
 	}
 	

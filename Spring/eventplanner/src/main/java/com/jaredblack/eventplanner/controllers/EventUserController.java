@@ -25,9 +25,10 @@ public class EventUserController {
 
 	// Show
 	@GetMapping("/events/{eventId}/guests/new")
-	public String renderCreateEventUser(@ModelAttribute("newEventUser") EventUser newEventUser, @PathVariable("eventId") Long eventId, HttpSession session) {
+	public String renderCreateEventUser(@ModelAttribute("newEventUser") EventUser newEventUser, @PathVariable("eventId") Long eventId, Model model, HttpSession session) {
 		if (session.getAttribute("userId") == null) {
 			session.invalidate();
+			model.addAttribute("eventId", eventId);
 			return "redirect:/";
 		}
 		return "newGuest.jsp";

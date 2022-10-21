@@ -67,12 +67,7 @@ public class User {
     @OneToMany(mappedBy="user", fetch = FetchType.LAZY)
 	private List<Event> sentEvents;
     
-    @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(
-    		name = "event_users",
-    		joinColumns = @JoinColumn(name="user_id"),
-    		inverseJoinColumns = @JoinColumn(name = "event_id")
-    		)
+    @OneToMany(mappedBy="user", fetch = FetchType.LAZY)
     private List<Event> eventUsers;
     
 

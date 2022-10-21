@@ -10,9 +10,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
@@ -68,12 +67,7 @@ public class Event {
     @JoinColumn(name="user_id")
     private User user;
     
-    @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(
-    		name = "event_users",
-    		joinColumns = @JoinColumn(name="event_id"),
-    		inverseJoinColumns = @JoinColumn(name = "user_id")
-    		)
+    @OneToMany(mappedBy="event", fetch = FetchType.LAZY)
     private List<EventUser> eventUsers;
     
 
