@@ -24,14 +24,14 @@
 	<div class="container mt-5">
 		<div class="d-flex justify-content-around">
 			<div>
-				<h1>${event.title }!</h1>
+			    <h1>${ event.title}!</h1>
 				<p>${ event.location}</p>
 				<p>${ event.eventDate}</p>
-				<p>${event.details }</p>
+				<p>${ event.details}</p>
 			</div>
 			<div>
 					<a href="/events" class="btn btn-secondary">Home</a> 
-					<a href="/events/guest" class="btn btn-secondary">Add Guest</a> 
+					<a href="/events/${event.id}/guests/new" class="btn btn-secondary">Add Guest</a> 
 					<a href="/events/edit/${event.id}" class="btn btn-secondary">Edit Event</a>
 					<form action="/events/delete/${event.id }" method="POST">
 							<input type="hidden" name="_method" value="delete" />
@@ -50,10 +50,10 @@
 					</tr>
 				</thead>
 				<tbody>
-					<c:forEach var="eachEvent" items="${eventList }">
+					<c:forEach var="eachEventUser" items="${event.eventUsers }">
 						<tr>
-							<td>${eachEvent.id }</td>
-							<td><c:out value="${eachEvent.user.userName }" /></td>
+							<td>${eachEventUser.guest }</td>
+							<td><c:out value="${eachEventUser.contribution }" /></td>
 						</tr>
 					</c:forEach>
 				</tbody>

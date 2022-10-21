@@ -73,7 +73,7 @@ public class User {
     		joinColumns = @JoinColumn(name="user_id"),
     		inverseJoinColumns = @JoinColumn(name = "event_id")
     		)
-    private List<Event> event_users;
+    private List<Event> eventUsers;
     
 
     
@@ -130,12 +130,13 @@ public class User {
 	public void setSentEvents(List<Event> sentEvents) {
 		this.sentEvents = sentEvents;
 	}
-	public List<Event> getEvent_users() {
-		return event_users;
+	public List<Event> getEventUsers() {
+		return eventUsers;
 	}
-	public void setEvent_users(List<Event> event_users) {
-		this.event_users = event_users;
+	public void setEventUsers(List<Event> eventUsers) {
+		this.eventUsers = eventUsers;
 	}
+
 
 
     

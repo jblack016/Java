@@ -23,8 +23,8 @@
 		<h1>Add a Guest</h1>
 		<a href="/events">Home</a>
 
-		<form:form action="" method="POST"
-			modelAttribute="newGuest">
+		<form:form action="/events/${eventId}/guests/process" method="POST"
+			modelAttribute="newEventUser">
 			<p>
 				<form:label path="guest">Name:</form:label>
 				<form:input path="guest" />
@@ -37,6 +37,7 @@
 			</p>
 			<p>
 				<form:hidden path="user" value="${userId }" />
+				<form:hidden path="event" value="${eventId }" />
 			</p>
 			<button type="submit" class="btn btn-primary">Add</button>
 		</form:form>

@@ -75,6 +75,7 @@ public class HomeController {
 		}
 		Event foundEvent = eventService.oneEvent(id);
 		model.addAttribute("event", foundEvent);
+		System.out.println(foundEvent.getEventUsers().get(0).getGuest());
 		return "viewEvent.jsp";
 	}
 	
