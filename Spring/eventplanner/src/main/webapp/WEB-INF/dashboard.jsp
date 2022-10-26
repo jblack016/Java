@@ -29,20 +29,20 @@
 			</div>
 			<div>
 				<p>
-					<a href="/logout" class="btn btn-secondary">Logout</a> <a
-						href="/events/new" class="btn btn-secondary">+ Add Event</a>
+					<a href="/events/new" class="btn btn-secondary">Add Event</a>
+					<a href="/logout" class="btn btn-secondary">Logout</a> 
 				</p>
 			</div>
 		</div>
 
-		<div>
+		<div class="center-test">
+		<h1 class="center">Upcoming Events</h1>
 			<table class="table table-secondary table-striped">
 				<thead>
 					<tr>
 						<td>Event</td>
 						<td>Created By</td>
 						<td>Date</td>
-						<td></td>
 					</tr>
 				</thead>
 				<tbody>

@@ -21,6 +21,10 @@
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
+<div class="right">
+	<a href="/events" class="btn btn-dark">Home</a>
+	<a href="/logout" class="btn btn-dark">Logout</a>
+</div>
 	<div class="center-test">
 
 		<div class="box ">
@@ -36,12 +40,11 @@
 
 		<div class="viewTable mx-auto">
 				<div class="box-btn d-flex justify-content-around">
-		<a href="/events" class="">Home</a>
-			 <a href="/events/${event.id}/guests/new" class="btn btn-secondary">Add Guest</a> 
-				<a href="/events/edit/${event.id}" class="btn btn-secondary">Edit Event</a>
+			 <a href="/events/${event.id}/guests/new" class="btn btn-sm btn-dark">Add Guest</a> 
+				<a href="/events/edit/${event.id}" class="btn btn-sm btn-dark">Edit Event</a>
 			<form action="/events/delete/${event.id }" method="POST">
 				<input type="hidden" name="_method" value="delete" />
-				<button type="submit" class="btn btn-danger">Delete</button>
+				<button type="submit" class="btn btn-sm btn-danger">Delete Event</button>
 			</form>
 		</div>
 			<table class="table table-sm table-secondary table-striped">
@@ -49,7 +52,7 @@
 					<tr>
 						<td>Guests</td>
 						<td>Contributions</td>
-						<td></td>
+						<td>Remove Guest</td>
 					</tr>
 				</thead>
 				<tbody>

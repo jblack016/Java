@@ -1,7 +1,7 @@
 body {
 	max-width: 1080px;
 	margin: auto;
-	background-color: #F3E7D3;
+	background-color: #b6cade;
 }
 table {
 	margin-left: auto;
@@ -13,7 +13,7 @@ table {
 }
 tr {
 	border-bottom: 1px solid #ddd;
-	background-color: rgba(150, 212, 212, 0.2);
+	background-color:#E2E3E5;
 }
 td {
 	padding: 16px;
@@ -51,11 +51,12 @@ td {
 	width: 600px;
 	border: 2px solid black;
 	margin: 10px;
+	background-color: #E2E3E5;
 }
 
 .box-btn{
 	width: 600px;
-	border: 2px solid black;
+	/* border: 2px solid black; */
 	margin-bottom: 10px;
 }
 .center-test {
@@ -64,6 +65,28 @@ td {
 	top: 50%;
 	transform: translate(-50%, -50%);
 	padding: 10px;
+}
+
+.right {
+  float: right;
+  width: 300px;
+  padding: 10px;
+}
+
+.box-event{
+	height: 375px;
+	width: 500px;
+	border: 2px solid black;
+	padding: 20px;
+	background-color: #E2E3E5;
+}
+
+.box-guest{
+	height: 225px;
+	width: 500px;
+	border: 2px solid black;
+	padding: 20px;
+	background-color: #E2E3E5;
 }
 
 

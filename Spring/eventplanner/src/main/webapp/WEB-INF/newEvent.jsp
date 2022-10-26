@@ -21,39 +21,45 @@
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<div class="container mt-5">
-		<h1>Add an Event</h1>
-		<a href="/events">Home</a>
+	<div class="right">
+		<a href="/events" class="btn btn-secondary">Home</a>
+		<a href="/logout" class="btn btn-secondary">Logout</a> 
+	</div>
 
-		<form:form action="/events/process" method="POST"
-			modelAttribute="newEvent">
-			<p>
-				<form:label path="title">Event Name:</form:label>
-				<form:input path="title" />
-				<form:errors style="color:red" path="title" />
-			</p>
-			<p>
-				<form:label path="location">Location:</form:label>
-				<form:input path="location" />
-				<form:errors style="color:red" path="location" />
-			</p>
-			<p>
-				<form:label path="eventDate">Event Date:</form:label>
-				<form:errors path="eventDate" class="text-danger" />
-				<form:input path="eventDate" type="date" />
-			</p>
-			<p>
-				<form:label path="details">Additional Information:</form:label>
-				<form:textarea path="details" />
-				<form:errors style="color:red" path="details" />
-			</p>
-			<p>
-				<form:hidden path="user" value="${userId }" />
-			</p>
-			<button type="submit" class="btn btn-primary">Add</button>
-		</form:form>
+	<div class="center-test">
+		<h1 class="center">Add an Event</h1>
+		
 
+		<div class="box-event">
+			<form:form action="/events/process" method="POST"
+				modelAttribute="newEvent">
+				<p>
+					<form:label path="title">Event Name:</form:label>
+					<form:input path="title" class="input"/>
+					<form:errors style="color:red" path="title" />
+				</p>
+				<p>
+					<form:label path="location">Location:</form:label>
+					<form:input path="location" class="input"/>
+					<form:errors style="color:red" path="location" />
+				</p>
+				<p>
+					<form:label path="eventDate">Event Date:</form:label>
+					<form:errors path="eventDate" class="text-danger" />
+					<form:input path="eventDate"  type="date" />
+				</p>
+				<p>
+					<form:label path="details">Additional Information:</form:label>
+					<form:textarea path="details" class="input"/>
+					<form:errors style="color:red" path="details" />
+				</p>
+				<p>
+					<form:hidden path="user" value="${userId }" />
+				</p>
+				<button type="submit" class="btn btn-success">Add</button>
+			</form:form>
 
+		</div>
 	</div>
 </body>
 </html>

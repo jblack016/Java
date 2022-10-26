@@ -62,7 +62,7 @@
 	            </td>
 	        </tr>
 	        <tr>
-	        	<td colspan=2><input class="input" class="button" type="submit" value="Submit"/></td>
+	        	<td colspan=2><button class="btn btn-success input" type="submit">Submit</button></td>
 	        </tr>
 	    </thead>
 	</table>
@@ -94,7 +94,7 @@
 	            </td>
 	        </tr>
 	        <tr>
-	        	<td colspan=2><input class="input" class="button" type="submit" value="Submit"/></td>
+	        	<td colspan=2><button class="btn btn-success input" type="submit">Submit</button></td>
 	        </tr>
 	    </thead>
 	</table>
