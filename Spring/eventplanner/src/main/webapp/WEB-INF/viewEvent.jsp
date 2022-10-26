@@ -47,6 +47,7 @@
 				<button type="submit" class="btn btn-sm btn-danger">Delete Event</button>
 			</form>
 		</div>
+		<h1 class="center">Guest List</h1>
 			<table class="table table-sm table-secondary table-striped">
 				<thead>
 					<tr>

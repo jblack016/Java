@@ -1,6 +1,6 @@
 package com.jaredblack.eventplanner.controllers;
 
-import java.util.List;
+
 
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
@@ -76,7 +76,6 @@ public class HomeController {
 		}
 		Event foundEvent = eventService.oneEvent(id);
 		model.addAttribute("event", foundEvent);
-		foundEvent.getEventUsers().forEach(e-> System.out.println(e.getId()));
 		return "viewEvent.jsp";
 	}
 	

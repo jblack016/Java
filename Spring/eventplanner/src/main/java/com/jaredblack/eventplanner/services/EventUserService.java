@@ -18,7 +18,6 @@ public class EventUserService {
 	// Create
 	
 	public EventUser createEventUser(EventUser eventUser) {
-		System.out.println("Printed line");
 		return eventUserRepo.save(eventUser);
 	}
 	
