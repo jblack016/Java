@@ -1,7 +1,11 @@
+ * {
+	color: #c4ac70;
+} 
+
 body {
 	max-width: 1080px;
 	margin: auto;
-	background-color: #b6cade;
+	background-color: #2d3959;
 }
 table {
 	margin-left: auto;
