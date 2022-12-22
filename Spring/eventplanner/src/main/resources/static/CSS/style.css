@@ -11,7 +11,7 @@ table {
 	margin-left: auto;
 	margin-right: auto;
 	width: 100%;
-	border: 2px solid #ced7dd;
+	border: 2px solid #80FFD3;
 	table-layout: fixed;
 	display: table;
 }
@@ -53,7 +53,7 @@ td {
 .box{
 	height: 200px;
 	width: 600px;
-	border: 2px solid black;
+	border: 2px solid #80FFD3;
 	margin: 10px;
 	background-color: #E2E3E5;
 }
@@ -80,7 +80,7 @@ td {
 .box-event{
 	height: 375px;
 	width: 500px;
-	border: 2px solid black;
+	border: 2px solid #80FFD3;
 	padding: 20px;
 	background-color: #E2E3E5;
 }
@@ -88,7 +88,7 @@ td {
 .box-guest{
 	height: 225px;
 	width: 500px;
-	border: 2px solid black;
+	border: 2px solid #80FFD3;
 	padding: 20px;
 	background-color: #E2E3E5;
 }
